@@ -3,6 +3,9 @@ max_depth=-1
 input_dir=$1
 output_dir=$2
 #сравнение строк
+#источники в основном по синтаксису и работе над скриптами: https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html, 
+#https://metanit.com/os/linux/12.1.php
+#https://habr.com/ru/articles/47163/
 if [ "$1" == "--max_depth" ]; then 
     max_depth=$2 
     input_dir=$3

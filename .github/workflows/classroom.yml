@@ -29,7 +29,6 @@ jobs:
       with:
         test-name: Task 1
         command: | 
-         chmod +x /home/runner/work/hse-tp-01-alexsashap123/hse-tp-01-alexsashap123/collect_files.sh 
          pytest tests/test_collect_files.py::test_script_runs_and_accepts_two_args --tb=line
         timeout: 10
         max-score: 1

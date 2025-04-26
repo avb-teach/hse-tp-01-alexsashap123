@@ -1,18 +1,13 @@
 #!/bin/bash
-max_depth=-1
+max_depth=-1 # это будет как флаг переменная для задач 1-4, чтобы расчитать глубину рекурсии copy()
 input_dir=$1
 output_dir=$2
 #сравнение строк
 #источники в основном по синтаксису и работе над скриптами: https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html, 
 #https://metanit.com/os/linux/12.1.php
 #https://habr.com/ru/articles/47163/
-if [ "$1" == "--max_depth" ]; then 
-    max_depth=$2 
-    input_dir=$3
-    output_dir=$4
-fi
 mkdir -p "$output_dir"
-copy_files() {
+copy() {
     local src="$1"
     local dest="$2"
     local current_depth="$3"

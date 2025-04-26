@@ -26,14 +26,11 @@ copy() {
                 ext=".$ext"
             fi
             new_filename="$filename"
-
-            
             cp "$item" "$dest/$new_filename"
         elif [ -d "$item" ]; then
             copy_files "$item" "$dest" $((current_depth + 1))
         fi
     done
 }
-copy_files "$input_dir" "$output_dir" 0
 echo "Files collected successfully to $output_dir"
 
